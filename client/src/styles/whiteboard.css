@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+  }
+
+  .whiteboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100vh;
+    background-color: #f0f0f0;
+    position: relative;
+    width: 800px; /* Adjust the width and height to your desired dimensions */
+    height: 600px;
+    border: 2px solid #ccc; /* Add a border to define the drawing area */
+    overflow: hidden; /* Hide any content that goes beyond the container boundaries */
+    padding-left: 20px;
+  }
+  
+  .whiteboard {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+  }
+  
+  .colors {
+    position: fixed;
+  }
+
+  .color {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+  }
+  
+  .color.black { background-color: black; }
+  .color.red { background-color: red; }
+  .color.green { background-color: green; }
+  .color.blue { background-color: blue; }
+  .color.yellow { background-color: yellow; }
+
+  .header,
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+    .whiteboard-container {
+      height: 100%;
+    }
+  
+    .colors {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .color {
+      margin: 5px 0;
+    }
+}
